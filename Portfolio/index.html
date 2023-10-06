@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="descritpion" content="Portfolio contenant des créations dans l'unviers du développement web"/>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="descritpion" content="Portfolio contenant des créations dans l'unviers du développement web"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Mon Portfolio</title>
   </head>
 
   <body>
-
     <header>
-
-      <img id="my-pic" src="./assets/image/IMG_3110.jpg" alt="Photo en noir et blanc d'un garçon souriant">
+      <img id="my-pic" src="./assets/image/IMG_3110.jpg" alt="Photo en noir et blanc d'un garçon souriant"
+      />
 
       <nav class="nav-menu">
         <ul>
@@ -21,27 +22,99 @@
           <li><a href="#contact-form"></a>Me contacter</li>
         </ul>
       </nav>
-
     </header>
 
     <main>
-
       <section id="presentation">
-          <h1>Qui suis-je ?</h1>
+        <h1>Qui suis-je ?</h1>
 
-          <p>
-            Je m'appelle Yann Breton, j'ai 21 ans et je suis un grand passionné de l'univers de l'informatique et d'Internet en général. <br>
-            L'environnement du développement Web s'est ouvert à moi lorsque j'ai enfin eu le courage d'arrêter ma carrière en restauration pour me lancer dans ce que j'aime. <br>
-          </p>
+        <p>
+          Je m'appelle Yann Breton, j'ai 21 ans et je suis un grand passionné de
+          l'univers de l'informatique et d'Internet en général. <br />
+
+          L'environnement du développement Web s'est ouvert à moi lorsque j'ai
+          enfin eu le courage d'arrêter ma carrière en restauration pour me
+          lancer dans ce que j'aime. <br />
+        </p>
       </section>
 
+      <h1>Mes créations</h1>
+      
       <section id="creations">
-          <h1>Mes créations</h1>
 
-          
+
+          <section id="specification" class="first-creation">
+
+            <div >
+              <h2>Le Cahier des charges</h2>
+
+              <img id="specification-screen" src="./assets/image/Capture d'écran 2023-09-28 150556.png" alt="Capture d'écran d'une couverture de cahier des charges">
+            </div>
+            
+
+              <div id="specificationModal" class="modal">
+                <div class="modal-content">
+
+                    <h3>"Le Cahier des charges"</h3>
+                    <p>Ce document a été créer le 07 septembre 2023.</p>
+                    <p>Dans ce projet, je devais créer ce cahier des charges en fonction d'une <br />
+                      entreprise fictive dans le but de s'entraîner et d'en apprendre la nécessité en vue de mon futur parcours professionnel.</p>
+
+                </div>
+              </div>
+
+              <button id="toggleSpecificationModalBtn">Voir le cahier des charges</button>
+
+            </section>
+
+            <section id="cv" class="second-creation">
+
+              <div >
+                <h2> Le Curriculum Vitae</h2>
+  
+                <img id="cv-screen" src=".//assets/image/Capture d'écran 2023-10-05 170748.png" alt="Capture d'écran d'un Curriculum Vitae">
+              </div>
+              
+  
+                <div id="cvModal" class="modal hidden">
+                  <div class="modal-content">
+  
+                      <h3>" Le Curriculum Vitae"</h3>
+                      <p>Ce document a été créer le 30 août 2023.</p>
+                      <p>Ici, je devais créer mon propre CV en language HTML et CSS.</p>
+  
+                  </div>
+                </div>
+  
+                <button id="toggleCvModalBtn">Voir le Curriculum Vitae</button>
+  
+              </section>
+
+              <section id="com" class="third-creation">
+
+                <div >
+                  <h2>L'espace commentaire dynamique</h2>
+    
+                  <img id="com-screen" src=".//assets/image/Capture d'écran 2023-10-05 231745.png" alt="Capture d'écran de la création d'un espace commentaire dynamique.">
+                </div>
+                
+    
+                  <div id="comModal" class="modal hidden">
+                    <div class="modal-content">
+    
+                        <h3>"L'espace commentaire dynamique"</h3>
+                        <p>Ce document a été créer le 21 septembre 2023.</p>
+                        <p>IDans cet exercice, j'ai reçu un espace commentaire déjà créer mais je devais le rendre dynamique en utilisant JavaScript.</p>
+    
+                    </div>
+                  </div>
+    
+                  <button id="toggleComModalBtn">Voir le Curriculum Vitae</button>
+    
+                </section>
       </section>
-
     </main>
 
+    <script src="./assets/JavaScript/app.js"></script>
   </body>
 </html>
