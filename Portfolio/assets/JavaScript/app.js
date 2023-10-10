@@ -97,6 +97,23 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     openComModal(); // Ouvre le deuxième modal par défaut
   }
+
+  const formulaire = document.getElementById('myForm');
+  const boutonSubmit = document.getElementById('boutonSubmit');
+
+  formulaire.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    afficherMessage();
+    reinitialiserChamps();
+  });
+
+  function afficherMessage(){
+    alert("Le formulaire a été soumis à l'adresse mail : ybreton27@gmail.com")
+  }
+
+  function reinitialiserChamps(){
+    formulaire.reset();
+  }
 });
 
 
