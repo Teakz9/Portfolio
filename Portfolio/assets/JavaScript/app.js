@@ -114,6 +114,15 @@ document.addEventListener('DOMContentLoaded', () => {
   function reinitialiserChamps(){
     formulaire.reset();
   }
+
+  const myPic = document.getElementById('myPic')
+  myPic.addEventListener('click', () => {
+    window;scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  })
 });
 
 
