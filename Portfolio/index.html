@@ -13,18 +13,18 @@
       <img id="myPic" src="./assets/image/IMG_3110.jpg" alt="Photo en noir et blanc d'un garçon souriant"
       />
 
-      <nav class="nav-menu">
+      <nav id="nav-menu">
         <ul>
-          <li><a href="#presentation">Ma présentation</a></li>
-          <li><a href="#creations">Mes créations</a></li>
-          <li><a href="#form">Me contacter</a></li>
+          <li class="nav navBorder"><a href="#presentation">Ma présentation</a></li>
+          <li class="nav navBorder"><a href="#creations">Mes créations</a></li>
+          <li class="nav"><a href="#form">Me contacter</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <section id="presentation">
-        <h1>Qui suis-je ?</h1>
+        <h2>Qui suis-je ?</h2>
 
         <p>
           Je m'appelle Yann Breton, j'ai 21 ans et je suis un grand passionné de
@@ -55,8 +55,8 @@
 
                     <h4>"Le Cahier des charges"</h4>
                     <p>Ce document a été créer le 07 septembre 2023.</p>
-                    <p>Dans ce projet, je devais créer ce cahier des charges en fonction d'une <br />
-                      entreprise fictive dans le but de s'entraîner et d'en apprendre la nécessité en vue de mon futur parcours professionnel.</p>
+                    <p>Sur ce projet, j'ai utilisé le logiciel Word pour la création du fichier, ensuite j'ai utilisé le site Convert.io pour convertir le document Word en PDF.</p>
+                    <p>Vous pouvez regarder le cahier des charges en détails en cliquant <a href="./assets/pdf/pdf.html" target="_blank" class="modalLink">ici</a> !</p>
 
                 </div>
               </div>
@@ -79,7 +79,8 @@
   
                       <h4>" Le Curriculum Vitae"</h4>
                       <p>Ce document a été créer le 30 août 2023.</p>
-                      <p>Ici, je devais créer mon propre CV en language HTML et CSS.</p>
+                      <p>Pour la création de mon Cv j'ai utilisé le logiciel Visual Studio Code avec les langages HTML et CSS.</p>
+                      <p>Vous pouvez retrouver le projet complet sur mon <a href="https://github.com/Teakz9/Devoir-CV-HTML-CSS" target="_blank" class="modalLink">GitHub</a> !</p>
   
                   </div>
                 </div>
@@ -102,7 +103,8 @@
     
                         <h4>"L'espace commentaire dynamique"</h4>
                         <p>Ce document a été créer le 21 septembre 2023.</p>
-                        <p>IDans cet exercice, j'ai reçu un espace commentaire déjà créer mais je devais le rendre dynamique en utilisant JavaScript.</p>
+                        <p>Pour cet exercice, un dossier préalablement créer en HTML et CSS m'a été fourni. </br> Ici, je devais réaliser missions dans le but d'améliorer le comportement de cet espace comementaire, pour ceci j'ai utilisé le langage JavaScript.</p>
+                        <p>Si vous souhaitez retrouver cet exercice, vous pouvez également aller voir sur mon <a href="https://github.com/Teakz9/Commentaire-dynamique-JS" target="_blank" class="modalLink">GitHub</a> !</p>
     
                     </div>
                   </div>
@@ -120,28 +122,28 @@
 
           <div class="form-row">
             <label for="Name">Nom :</label>
-            <input name="Name" type="text" class="case space"> 
+            <input name="Name" type="text" class="case space" required> 
 
 
 
             <label for="First-Name">Prénom :</label>
-            <input name="First-Name" type="text" class="case"> 
+            <input name="First-Name" type="text" class="case" required> 
           </div>
 
           <div class="form-group">
             <label for="Object">Objet :</label>
-            <input name="Object" type="text" class="case"> 
+            <input name="Object" type="text" class="case" required> 
           </div>
 
           <div class="form-group">
             <label for="Message">Message :</label>
-            <textarea name="Message" class="case message" cols="30" rows="10"></textarea> 
+            <textarea name="Message" class="case message" cols="30" rows="10" required></textarea> 
           </div>
           <button type="submit" id="boutonSubmit">Envoyer</button>
         </form>
 
       </section>
-<a href="./assets/pdf/pdf.html" target="_blank">clique ici</a>
+
     </main>
 
     <footer>

@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  const myPic = document.getElementById('myPic');
+  myPic.addEventListener('click', () =>{
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  });
+
   const specificationModal = document.getElementById('specificationModal');
   const toggleSpecificationModalBtn = document.getElementById('toggleSpecificationModalBtn');
 
@@ -24,6 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('click', (event) => {
     if (event.target === specificationModal) {
+      closeSpecificationModal();
+    }
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target !== specificationModal && event.target !== toggleSpecificationModalBtn) {
       closeSpecificationModal();
     }
   });
@@ -63,6 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
     openCvModal(); // Ouvre le deuxième modal par défaut
   }
 
+  window.addEventListener('click', (event) => {
+    if (event.target !== cvModal && event.target !== toggleCvModalBtn) {
+      closeCvModal();
+    }
+  });
+
   const comModal = document.getElementById('comModal');
   const toggleComModalBtn = document.getElementById('toggleComModalBtn');
 
@@ -98,36 +120,52 @@ document.addEventListener('DOMContentLoaded', () => {
     openComModal(); // Ouvre le deuxième modal par défaut
   }
 
+  window.addEventListener('click', (event) => {
+    if (event.target !== comModal && event.target !== toggleComModalBtn) {
+      closeComModal();
+    }
+  });
+
   const formulaire = document.getElementById('myForm');
   const boutonSubmit = document.getElementById('boutonSubmit');
-
-  formulaire.addEventListener('submit', (e) =>{
+  
+  formulaire.addEventListener('submit', (e) => {
     e.preventDefault();
     afficherMessage();
     reinitialiserChamps();
   });
-
-  function afficherMessage(){
-    alert("Le formulaire a été soumis à l'adresse mail : ybreton27@gmail.com")
+  
+  function afficherMessage() {
+    // Créer un élément de pop-up
+    const popup = document.createElement('div');
+    popup.className = 'popup';
+    popup.innerHTML = 'Le formulaire a été soumis à l\'adresse mail : ybreton27@gmail.com';
+  
+    // Ajouter le pop-up à la page
+    document.body.appendChild(popup);
+  
+    // Fermer le pop-up après un certain délai (par exemple, 3 secondes)
+    setTimeout(() => {
+      popup.style.display = 'none';
+    }, 3000);
   }
 
   function reinitialiserChamps(){
     formulaire.reset();
   }
 
-  const myPic = document.getElementById('myPic')
-  myPic.addEventListener('click', () => {
-    window;scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-  })
-
   const lastUpdateDate = document.getElementById('last-update-date');
   const currentDate = new Date();
   const options = { year: 'numeric', month: 'long', day: 'numeric'};
   lastUpdateDate.textContent = currentDate.toLocaleDateString(fr-FR, options);
+
+  const presentationSection = document.getElementById('presentation');
+  const creationsSection = document.getElementById('creations');
+  const formSection = document.getElementById('form');
+
+  const sections = document.querySelectorAll('section');
+  const navItems = document.querySelectorAll('.nav');
+  
 });
 
 

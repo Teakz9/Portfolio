@@ -1,7 +1,9 @@
 body{
-    background-color: #00001b;
+    background-color: rgb(41, 41, 41);
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    margin: 0;
+    padding: 0;
 }
 
 header{
@@ -9,7 +11,12 @@ header{
     justify-content: space-between; 
     align-items: center;
     padding: 10px;
-    padding-bottom: 300px;
+    background-color: black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image: radial-gradient(orange, rgba(0, 0, 0, 0)) 50;
 }
 
 #myPic {
@@ -18,8 +25,9 @@ header{
     object-fit: cover;
     border-radius: 100px;
     position: fixed;
-    margin-top: 50px;
     margin-left: 20px;
+    border: 5px solid rgb(41, 41, 41);
+    box-shadow: 0 0 20px orange;
 }
 
 #myPic:hover{
@@ -29,35 +37,45 @@ header{
 .nav-menu {
     display: flex;
     align-items: end;
-    background-color: #ffd700;
-    margin-left: 75%;
+    background-color: orange;
+    margin-left: 65%;
+    border-radius: 10px;
 }
 
-.nav-menu ul{
+ul{
     display: flex;
     list-style: none;
-    padding: 0;
 }
 
-.nav-menu li {
+.nav {
     margin-right: 40px;
-    padding-right: 5px;
-    border-right-style: solid;
-    border-right-width: 1px;
+}
+
+.navBorder{
+    border-right: 2px solid black;
+    padding-right: 40px;
 }
 
 a{
     text-decoration: none;
-    color: white;
+    color: black;
+    font-weight: 600;
 }
 
 main{
     display: flex;
     justify-content: center;
+    margin-top: 200px;
 }
 
 footer{
-    margin-top: 300px;
+    margin-top: 100px;
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-image: radial-gradient(orange, rgba(0, 0, 0, 0)) 50;
 }
 
 .smLink{
