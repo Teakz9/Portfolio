@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeComModal() {
     comModal.style.display = 'none';
-    toggleComModalBtn.textContent = "Ouvrir l'espace commentaire";
+    toggleComModalBtn.textContent = "Voir l'espace commentaire";
   }
 
   function toggleComModal() {
@@ -123,6 +123,11 @@ document.addEventListener('DOMContentLoaded', () => {
       behavior: 'smooth'
     });
   })
+
+  const lastUpdateDate = document.getElementById('last-update-date');
+  const currentDate = new Date();
+  const options = { year: 'numeric', month: 'long', day: 'numeric'};
+  lastUpdateDate.textContent = currentDate.toLocaleDateString(fr-FR, options);
 });
 
 
