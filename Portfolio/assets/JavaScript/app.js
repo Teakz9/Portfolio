@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  //Permet au clic de l'image, de remonter en haut de la page
   const myPic = document.getElementById('myPic');
   myPic.addEventListener('click', () =>{
     window.scrollTo({
@@ -9,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  //Modal du cahier des charges
   const specificationModal = document.getElementById('specificationModal');
   const toggleSpecificationModalBtn = document.getElementById('toggleSpecificationModalBtn');
 
@@ -44,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  //Modal du CV
   const cvModal = document.getElementById('cvModal');
   const toggleCvModalBtn = document.getElementById('toggleCvModalBtn');
 
@@ -85,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  //Modal de l'espace commentaire dynamique
   const comModal = document.getElementById('comModal');
   const toggleComModalBtn = document.getElementById('toggleComModalBtn');
 
@@ -126,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  //Fonctionnement du formulaire
   const formulaire = document.getElementById('myForm');
   const boutonSubmit = document.getElementById('boutonSubmit');
   
@@ -135,16 +140,15 @@ document.addEventListener('DOMContentLoaded', () => {
     reinitialiserChamps();
   });
   
+  //Affichage d'un pop-up à l'envoi du formulaire
   function afficherMessage() {
     // Créer un élément de pop-up
     const popup = document.createElement('div');
     popup.className = 'popup';
     popup.innerHTML = 'Le formulaire a été soumis à l\'adresse mail : ybreton27@gmail.com';
   
-    // Ajouter le pop-up à la page
     document.body.appendChild(popup);
   
-    // Fermer le pop-up après un certain délai (par exemple, 3 secondes)
     setTimeout(() => {
       popup.style.display = 'none';
     }, 3000);
@@ -154,10 +158,11 @@ document.addEventListener('DOMContentLoaded', () => {
     formulaire.reset();
   }
 
+  //La date de dernière mise à jour du site web
   const lastUpdateDate = document.getElementById('last-update-date');
   const currentDate = new Date();
   const options = { year: 'numeric', month: 'long', day: 'numeric'};
-  lastUpdateDate.textContent = currentDate.toLocaleDateString(fr-FR, options);
+  lastUpdateDate.textContent = currentDate.toLocaleDateString('fr-FR', options);
 
   const presentationSection = document.getElementById('presentation');
   const creationsSection = document.getElementById('creations');
