@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const sections = document.querySelectorAll('section');
   const navItems = document.querySelectorAll('.nav');
-  
+
 });
 
 

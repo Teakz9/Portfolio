@@ -1,6 +1,7 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="pdf">
+    <h1>Voici une page montrant un document PDF</h1>
+    <p>bla bla bla</p>
   </div>
 </template>
 
