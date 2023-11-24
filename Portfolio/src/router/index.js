@@ -1,28 +1,36 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import PdfView from '../views/PdfView.vue'
-import NotFoundView from '../views/NotFoundView.vue'  // Ajout de la vue de la page 404
+import PDFView from '../views/PDFView.vue'
+import Error404 from '../views/Error404.vue'
 
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: Home
-  },
-  {
-    path: '/pdf',
-    name: 'pdf',
-    component: Pdf
-  },
-  {
-    path: '/:pathMatch(.*)*',
-    name: 'notfound',
-    component: NotFound
-  },
-];
 const router = createRouter({
-  history: createWebHistory(),
-  routes
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: HomeView
+    },
+    {
+      path: '/pdf',
+      name: "pdf",
+      component: PDFView
+    },
+    {
+      path: "/:patchMatch(.*)",
+      name:"Error404",
+      component: Error404
+    }
+  ]
 })
+
+router.beforeEach((to, from, next) => {
+  console.log(`Navigating to ${to.path} from ${from.path}`);
+  next();
+});
+
+router.afterEach((to, from) => {
+  console.log(`Navigated to ${to.path} from ${from.path}`);
+});
 
 export default router
